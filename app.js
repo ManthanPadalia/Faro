@@ -73,6 +73,10 @@ const sessionOption = {
 //   res.send("Root is working");
 // });
 
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
+
 app.use(session(sessionOption));
 app.use(flash());
 
